@@ -10,6 +10,10 @@ int getReminder(int divisor, int divident) {
 
 }
 
+int getMultiplicative(int divisor, int divident) {
+	return divisor / divident;
+}
+
 //------
 
 
@@ -28,6 +32,25 @@ int gcd(int a, int b) {
 		a = b;
 		b = reminder;
 		reminder = getReminder(a, b);
+	}
+
+	return b;
+
+}
+
+int gcd_verbose(int a, int b) {
+
+	// a = bq + r
+	int reminder = getReminder(a, b);
+	int multiplicative = getMultiplicative(a, b);
+
+	while( reminder > 0 ) {
+		// XXX: Bad programming but a necessary evil
+		printf("%d = %d(%d) + %d\n", a, b, multiplicative, reminder);
+		a = b;
+		b = reminder;
+		reminder = getReminder(a, b);
+		multiplicative = getMultiplicative(a, b);
 	}
 
 	return b;

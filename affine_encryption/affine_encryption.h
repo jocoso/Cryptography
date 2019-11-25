@@ -10,8 +10,20 @@ static char letters[] = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 
 char single_char_encryption(char to_encrypt, int alpha, int beta);
 
 /*
+*   Decrypt a single character knowing keys alpha and beta
+*/
+char single_char_decryption(char to_decrypt, int alpha, int beta);
+
+/*
 *   Given an array of character, an alpha and a beta for every character
 *   it will perform a subsequent encryption and return the result
 */
 
-void string_encryption(char* to_encrypt, int n, int alpha, int beta);
+void string_encryption(const char* to_encrypt, int n, int alpha, int beta);
+
+
+/*
+*   Given an array of character, an alpha and a beta for every character
+*   it will perform a subsequent decryption and return the result
+*/
+void string_encryption(const char* to_encrypt, int n, int alpha, int beta);

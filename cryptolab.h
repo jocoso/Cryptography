@@ -18,12 +18,11 @@ int getMultiplier(int, int);
 // and that both parameters are positive integers > 0
 int gcd(int, int);
 
-// Same as gcd but it will explain every step
-int gcd_verbose(int, int);
-
 // Function will assume the first parameter is bigger than the second
 // and that both parameters are positive integers > 0
-int* extended_gcd(int, int, int*);
+int extended_gcd(int, int, int*, int*);
+
+int mod_inverse(int a, int b);
 
 
 #endif /*_CRYPTOLAB_H*/
